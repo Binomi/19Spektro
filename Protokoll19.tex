@@ -184,7 +184,58 @@ In diesem Versuch sollen an einer Quecksilber-Dampflampe beide Verfahren  bezüg
 \label{sec:theorie}
 \subsection{Prismenspektrometer}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.6]{Prisma.png}
+	\caption{Prismaquerschnitt mit Strahlengang. \cite[Datum: 28.12.2014]{LP19}}
+	\label{fig:prisma}
+\end{figure}
+Dieses Spektrometer basiert auf der \textit{Dispersion}, also der Wellenlängenabhängigkeit des Brechungsindex.
+Unter \textit{normaler} Dispersion versteht man, dass der Brechungsindex $n$ mit zunehmender Wellenlänge abnimmt.
+Bei anomaler Dispersion geschieht das Gegenteil: $\frac{\dif n}{\dif \lambda} > 0$.\\
+
+Snellius'sches Brechungsgesetz $n_1\cdot\sin\alpha_1=n_2\cdot\sin\alpha_2$\\
+
+Mit dem Brechungsgesetz  und den geometrischen Beziehungen aus Abb.\ref{fig:prisma} $\gamma_1+\gamma_2=\varepsilon$ sowie $\delta=\alpha_1+\alpha_2-\epsilon$ folgt bei symmetrischer Durchstrahlung ($\alpha_1=\alpha_2$) für den Ablenkwinkel $\delta_\text{min}$, der so minimal wird,
+
+\begin{align}
+	\sin\left(\frac{\delta_\text{min}+\varepsilon}{2}\right)=n\cdot\sin\left(\frac{\varepsilon}{2}\right)\,.
+\end{align}
+
+Leitet man diese Beziehung nach $n$ ab
+
+\begin{align}
+	\cos\left(\frac{\delta_\text{min}+\varepsilon}{2}\right)\cdot \frac{\dif \delta}{\dif n}=\sin\left(\frac{\varepsilon}{2}\right)
+\end{align}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.6]{Prisma2.png}
+	\caption{Skizze zur Bestimmung des Auflösungsvermögens. \cite[Datum: 28.12.2014]{LP19}}
+	\label{fig:prisma2}
+\end{figure}
+
+\begin{align}
+	\frac{\dif \delta}{\dif n}=\frac{B}{S}
+\end{align}
+
+\textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$
+
+\begin{align}
+	A=B\left|\frac{\dif n}{\dif \lambda}\right|
+\end{align}
+
 \subsection{Gitterspektrometer}
+\begin{align}
+	\sin\alpha_\text{max}&=\frac{k\lambda}{a}\\
+	\sin\alpha_\text{min}&=\frac{n\lambda}{Na}
+\end{align}
+
+Somit ist das Auflösungsvermögen durch
+\begin{align}
+	A=kN
+\end{align}
+gegeben.
 
 \subsection{Quecksilber-Dampflampe}
 
@@ -199,7 +250,8 @@ In diesem Versuch sollen an einer Quecksilber-Dampflampe beide Verfahren  bezüg
 \end{figure}
 
 \subsection{Prismenspektrometer}
-Folgende Schritte werden zuerst mit dem Kronglas-Prisma durchgeführt, danach mit dem Prisma aus schwerem Flintglas.\\
+Folgende Schritte werden zuerst mit dem Kronglas-Prisma durchgeführt, danach mit dem Prisma aus schwerem Flintglas.
+Bei beiden misst man die geometrischen Basislängen.\\
 
 Zuerst wird der Spektralapparat aufgebaut und justiert.
 Dazu werden die Hg-Lampe, die Kondensorlinse, der Beleuchtungsspalt sowie die zweite Linse in der gleichen Reihenfolge wie in Abb. \ref{fig:aufbau} befestigt - und zwar so, dass die Lichtstrahlen danach parallel sind.
@@ -209,7 +261,7 @@ Nun wird das Fadenkreuz des Okulars auf den Strahl eingestellt und die Position 
 
 Danach wird das Prisma in den Strahlengang gestellt und so gedreht, dass das Prisma symmetrisch durchstrahlt wird (minimaler Ablenkwinkel).
 Der Schwenkarm wird nun auf eine der gelben Linien justiert.
-Den Winkel und die geometrischen Basislängen des Prismas notiert man.
+Den Winkel notiert man.
 
 Über den Abstand der eingestellten gelben Linie zur grünen Linie (Feintrieb des Okulars, der Schwenkarm wird nicht verstellt) und den Abstand der dritten Linse zum Okular kann der Ablenkwinkel $\Delta\varphi$ zwischen den beiden Linien bestimmt werden.
 
