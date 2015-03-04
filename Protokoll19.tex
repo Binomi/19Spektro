@@ -194,18 +194,22 @@ Dieses Spektrometer basiert auf der \textit{Dispersion}, also der Wellenlängena
 Unter \textit{normaler} Dispersion versteht man, dass der Brechungsindex $n$ mit zunehmender Wellenlänge abnimmt.
 Bei anomaler Dispersion geschieht das Gegenteil: $\frac{\dif n}{\dif \lambda} > 0$.\\
 
-Snellius'sches Brechungsgesetz $n_1\cdot\sin\alpha_1=n_2\cdot\sin\alpha_2$\\
+Das \emph{Snellius'sches Brechungsgesetz} beschreibt, wie ein Strahl, der im Winkel $\alpha_1$ zum Lot auf eine Grenzschicht zwischen einem Medium mit Brechungsindex $n_1$ und einem mit einem Index $n_2$ trifft, gebrochen wird:
+\begin{align}
+	n_1\cdot\sin\alpha_1=n_2\cdot\sin\alpha_2 \.
+	\label{eq:Snellius}
+\end{align}
+Im zweiten Medium verläuft der Strahl dann in einem Winkel $\alpha_2$ zum Lot.\\
 
-Mit dem Brechungsgesetz  und den geometrischen Beziehungen aus Abb.\ref{fig:prisma} $\gamma_1+\gamma_2=\varepsilon$ sowie $\delta=\alpha_1+\alpha_2-\epsilon$ folgt bei symmetrischer Durchstrahlung ($\alpha_1=\alpha_2$) für den Ablenkwinkel $\delta_\text{min}$, der so minimal wird,
+Mit dem Brechungsgesetz  und den geometrischen Beziehungen aus Abb.\ref{fig:prisma} $\gamma_1+\gamma_2=\varepsilon$ sowie $\delta=\alpha_1+\alpha_2-\epsilon$ folgt bei symmetrischer Durchstrahlung ($\alpha_1=\alpha_2$) für den Ablenkwinkel $\delta$
 
 \begin{align}
-	\sin\left(\frac{\delta_\text{min}+\varepsilon}{2}\right)=n\cdot\sin\left(\frac{\varepsilon}{2}\right)\,.
+	\sin\left(\frac{\delta+\varepsilon}{2}\right)=n\cdot\sin\left(\frac{\varepsilon}{2}\right)\,.
 \end{align}
 
-Leitet man diese Beziehung nach $n$ ab
-
+Dies leitet man nach $n$ ab und stellt nach $\frac{\dif \delta}{\dif n}$ um:
 \begin{align}
-	\cos\left(\frac{\delta_\text{min}+\varepsilon}{2}\right)\cdot \frac{\dif \delta}{\dif n}=\sin\left(\frac{\varepsilon}{2}\right)
+	\frac{\dif \delta}{\dif n}=\frac{\sin\left(\frac{\varepsilon}{2}\right)}{\cos\left(\frac{\delta+\varepsilon}{2}\right)}=\frac{B}{S}
 \end{align}
 
 \begin{figure}[!h]
@@ -215,11 +219,7 @@ Leitet man diese Beziehung nach $n$ ab
 	\label{fig:prisma2}
 \end{figure}
 
-\begin{align}
-	\frac{\dif \delta}{\dif n}=\frac{B}{S}
-\end{align}
-
-\textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$
+Das \textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$ charakterisiert, ob ein Spektrometer zwei unterschiedliche Wellenlängen auflösen kann.
 
 \begin{align}
 	A=B\left|\frac{\dif n}{\dif \lambda}\right|
@@ -231,6 +231,7 @@ Leitet man diese Beziehung nach $n$ ab
 	\sin\alpha_\text{min}&=\frac{n\lambda}{Na}
 \end{align}
 
+Um zwei verschiedene Wellenlängen aufzulösen, muss das Maximum der einen Wellenlänge und das Minimum der anderen an gleicher Stelle liegen.
 Somit ist das Auflösungsvermögen durch
 \begin{align}
 	A=kN
