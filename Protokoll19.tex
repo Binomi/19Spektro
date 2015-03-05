@@ -196,8 +196,8 @@ Bei anomaler Dispersion geschieht das Gegenteil: $\frac{\dif n}{\dif \lambda} > 
 
 Das \emph{Snellius'sches Brechungsgesetz} beschreibt, wie ein Strahl, der im Winkel $\alpha_1$ zum Lot auf eine Grenzschicht zwischen einem Medium mit Brechungsindex $n_1$ und einem mit einem Index $n_2$ trifft, gebrochen wird:
 \begin{align}
-	n_1\cdot\sin\alpha_1=n_2\cdot\sin\alpha_2 \.
-	\label{eq:Snellius}
+	n_1 \cdot \sin \alpha_1 = n_2 \cdot \sin \alpha_2 \,.
+	\label{eq:Snellius} 
 \end{align}
 Im zweiten Medium verläuft der Strahl dann in einem Winkel $\alpha_2$ zum Lot.\\
 
@@ -226,6 +226,8 @@ Das \textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$ charakteris
 \end{align}
 
 \subsection{Gitterspektrometer}
+Für ein Maximum muss der Wegunterschied ein ganzzahliges Vielfaches der Wellenlänge $\lambda$ sein, also $\Delta s=a \cdot \sin \alpha=k \lambda$.
+Um totale Auslöschung zu haben, 
 \begin{align}
 	\sin\alpha_\text{max}&=\frac{k\lambda}{a}\\
 	\sin\alpha_\text{min}&=\frac{n\lambda}{Na}
@@ -237,8 +239,29 @@ Somit ist das Auflösungsvermögen durch
 	A=kN
 \end{align}
 gegeben.
+Dabei ist $k$ die Beugungsordnung und $N$ die Anzahl der beleuchteten Spalte.
 
 \subsection{Quecksilber-Dampflampe}
+Eine Quecksilber-Dampflampe hat kein kontinuierliches Spektrum wie etwa eine Glühbirne, sondern diskrete Linien.
+In Tabelle \ref{tab:Hg-Linien} sind die für diesen Versuch wichtigen Linien aufgeführt.
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|}
+	    \hline		
+		Farbe & Wellenlänge [nm]\\
+		\hline
+		\hline
+		gelb & 579.07, 576.96\\
+		\hline		
+		grün & 546.07\\
+		\hline
+		violett & 407.78, 404.66\\
+		\hline	
+	\end{tabular}
+	\caption{Für den Versuch wichtige Linien des Quecksilber-Spektrums}
+	\label{tab:Hg-Linien}
+\end{table}
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
