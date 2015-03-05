@@ -85,7 +85,9 @@
 % \end{SCfigure}
 \usepackage{sidecap}
 
-% Befehl für "Entspricht"-Zeichen
+\usepackage{rotating}
+
+% Befehl für "Entspricht"-Zeiche\resizebox{angle=90}n
 \newcommand{\corresponds}{\ensuremath{\mathrel{\widehat{=}}}}
 
 %Für chemische Formeln (von www.dante.de)
@@ -304,7 +306,64 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 
 \section{Auswertung}
 \label{sec:auswertung}
+\begin{figure}[!htb]
+	\def\svgwidth{0.8\linewidth}	
+	\input{strahlengang1.pdf_tex}
+	\caption{Strahlengang des zur Justage.}
+\end{figure}
 
+
+\begin{figure}[!htb]
+	\def\svgwidth{0.8\linewidth}
+	\input{strahlengang2.pdf_tex}
+	\caption{Strahlengang des Prismenspektrometers.}
+\end{figure}
+
+\begin{align}
+	D&=\frac{x_\text{gelb} - x_\text{grün}}{\Delta\lambda \cdot s}\\
+\sigma_{D}&=\frac{1}{\Delta\lambda \cdot s^{2}} \cdot \sqrt{2s^{2} \cdot \sigma_{x} + \sigma_{s}^{2} \cdot \left(x_\text{gelb} - x_\text{grün}\right)^{2}}
+\end{align}
+
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{|c||c|c|}
+		\hline
+		Glas & \multicolumn{2}{c|}{Winkeldispersion}\\		
+		 & Literaturwert [$10^6~\circ$/m] & Messwert [$10^6~\circ$/m]\\
+		\hline
+		\hline
+		Kronglas& 3.47 & $4.33 \pm 0.19$ \\
+		Schweres Flintglas & 15.0 & $13.39 \pm 0.26$ \\
+		Leichtes Flintglas & 9.01 & $8.45 \pm 0.22$ \\
+		\hline
+	\end{tabular}
+	\label{tab:Dispersion}
+\end{table}
+
+Die zweite Linse hat laut Angabe eine Brennweite von $f_2=(29.8 \pm 0.3)~$cm.
+Für das Prisma aus leichtem Flintglas wurde als Bild des Spaltes, bei dem die zwei gelben Linien gerade nicht mehr aufgelöst werden, eine Breite von $B'=(0.55 \pm 0.03)~$mm gemessen.
+Die tatsächliche Breite $B$ ergibt sich als Bildgröße durch Vergrößerung des optischen Systems.
+Dabei wird die Vergrößerung als Quotient des Abstandes der dritten Linse zum Okular (Bildweite $b=(30.5\pm 0.5)~$mm) durch die Brennweite der zweiten Linse, hier der Gegenstandsweite, berechnet.
+Mit der Fehlerfortpflanzung ergeben sich also folgende Formeln:
+\begin{align}
+	B&=B'\cdot\frac{f_2}{b}\\
+	\sigma_B&=\sqrt{\left(\frac{f_2}{b}\right)^2\sigma_{B'}^2+\left(\frac{B'}{b}\right)^2\sigma_{f_2}^2+\left(\frac{B' \cdot f_2}{b^2}\right)^2\sigma_b^2}\,.
+\end{align}
+Dann erhält man $B=(0.55\pm 0.11)~$mm.\\
+Bei den anderen zwei Prismen konnte man den Spalt nicht so weit aufdrehen, dass man zwei Linien gesehen hat.
+Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größer als 2.75 mm sein müsste.
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		& theoretischer Wert & leichtes Flintglas		
+		\hline
+	    Auflösungsvermögen & 274.44 & 81 \pm 17 & 
+		\hline
+		
+	\end{tabular}
+\end{table}
 
 \section{Diskussion}
 \label{sec:diskussion}

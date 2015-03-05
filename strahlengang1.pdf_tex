@@ -1,0 +1,64 @@
+%% Creator: Inkscape inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'strahlengang1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1074.86738281bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.22602243)%
+    \put(0,0){\includegraphics[width=\unitlength]{strahlengang1.pdf}}%
+    \put(-0.00102266,0.17880494){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{Hg-Lampe}}}%
+    \put(0.14761131,0.21810576){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{Kondensorlinse}}}%
+    \put(0.36588628,0.04095959){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{$f_2$}}}%
+    \put(0.21009133,0.00216742){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{Beleuchtungsspalt}}}%
+    \put(0.38553265,0.19073538){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{2. Linse}}}%
+    \put(0.62245927,0.191214){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{3. Linse}}}%
+    \put(0.55171339,0.01556442){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{Rotfilter}}}%
+    \put(0.80923349,0.19195828){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[lb]{\smash{Okular}}}%
+    \put(0.72072566,0.0472651){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$f_3$}}}%
+    \put(0.81263253,0.04479959){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$f_4$}}}%
+  \end{picture}%
+\endgroup%
