@@ -431,6 +431,11 @@ Da die Messung der violetten Linien teilweise sehr abweichende Werte liefert, wi
 
 \subsubsection{Wellenlängenunterschied der gelben Linien}
 \begin{align}
+	\frac{k\lambda}{a}&=\sin\alpha \\
+	\frac{k(\lambda+\Delta\lambda)}{a}&=\sin(\alpha+\Delta\alpha) =\sin\alpha\cdot\cos\Delta\alpha +\cos\alpha\cdot\sin\Delta\alpha \approx\sin\alpha+ \cos\alpha\cdot\Delta\alpha
+\end{align}
+
+\begin{align}
 	\Delta\lambda&=\frac{a}{k} \cdot \Delta \alpha \cdot \cos{\left (\alpha \right )}\\
 \sigma_{\Delta\lambda}&=\frac{a}{k} \cdot \sigma_{\Delta \alpha} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert
 \end{align}
@@ -460,7 +465,7 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
-		\hline		
+		\hline
 		& theoretischer Wert &1.Ordnung &  4.Ordnung & 8.Ordnung \\
 		\hline
 	    Auflösungsvermögen & $274.44$ & $>257$ & $308.6 \pm 0.5$ & $<617$ \\
@@ -473,6 +478,8 @@ Dies wird dann erreicht, wenn das Gitter in seiner ganzen Breite von $1.5~$cm be
 \section{Diskussion}
 \label{sec:diskussion}
 \subsection{Prismenspektrometer}
+
+
 
 \subsection{Gitterspektrometer}
 
