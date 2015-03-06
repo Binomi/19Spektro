@@ -308,7 +308,7 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 \label{sec:auswertung}
 
 \subsection{Prismenspektrometer}
-
+\subsubsection{Strahlengänge}
 \begin{figure}[!htb]
 	\def\svgwidth{0.8\linewidth}	
 	\input{strahlengang1.pdf_tex}
@@ -322,19 +322,18 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 	\caption{Strahlengang des Prismenspektrometers.}
 \end{figure}
 
+\subsubsection{Winkeldispersion}
 \begin{align}
 	D&=\frac{x_\text{gelb} - x_\text{grün}}{\Delta\lambda \cdot s}\\
 \sigma_{D}&=\frac{1}{\Delta\lambda \cdot s^{2}} \cdot \sqrt{2s^{2} \cdot \sigma_{x} + \sigma_{s}^{2} \cdot \left(x_\text{gelb} - x_\text{grün}\right)^{2}}
 \end{align}
 
-
 \begin{table}[!htb]
 	\centering
-	\begin{tabular}{|c||c|c|}
+	\begin{tabular}{|c|c|c|}
 		\hline
 		Glas & \multicolumn{2}{c|}{Winkeldispersion}\\		
 		 & Literaturwert [$10^6~^\circ$/m] & Messwert [$10^6~^\circ$/m]\\
-		\hline
 		\hline
 		Kronglas& 3.47 & $4.33 \pm 0.19$ \\
 		Schweres Flintglas & 15.0 & $13.39 \pm 0.26$ \\
@@ -344,18 +343,23 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 	\label{tab:Dispersion}
 \end{table}
 
+\subsubsection{Auflösungsvermögen}
 Die zweite Linse hat laut Angabe eine Brennweite von $f_2=(29.8 \pm 0.3)~$cm.
 Für das Prisma aus leichtem Flintglas wurde als Bild des Spaltes, bei dem die zwei gelben Linien gerade nicht mehr aufgelöst werden, eine Breite von $B'=(0.55 \pm 0.03)~$mm gemessen.
-Die tatsächliche Breite $B$ ergibt sich als Bildgröße durch Vergrößerung des optischen Systems.
+Die tatsächliche Strahlbreite $S$ ergibt sich als Bildgröße durch Vergrößerung des optischen Systems.
 Dabei wird die Vergrößerung als Quotient des Abstandes der dritten Linse zum Okular (Bildweite $b=(30.5\pm 0.5)~$mm) durch die Brennweite der zweiten Linse, hier der Gegenstandsweite, berechnet.
 Mit der Fehlerfortpflanzung ergeben sich also folgende Formeln:
 \begin{align}
-	B&=B'\cdot\frac{f_2}{b}\\
-	\sigma_B&=\sqrt{\left(\frac{f_2}{b}\right)^2\sigma_{B'}^2+\left(\frac{B'}{b}\right)^2\sigma_{f_2}^2+\left(\frac{B' \cdot f_2}{b^2}\right)^2\sigma_b^2}\,.
+	S&=B'\cdot\frac{f_2}{b}\\
+	\sigma_S&=\sqrt{\left(\frac{f_2}{b}\right)^2\sigma_{B'}^2+\left(\frac{B'}{b}\right)^2\sigma_{f_2}^2+\left(\frac{B' \cdot f_2}{b^2}\right)^2\sigma_b^2}\,.
 \end{align}
-Dann erhält man $B=(0.55\pm 0.11)~$mm.\\
+Dann erhält man $S=(0.55\pm 0.11)~$mm.\\
 Bei dem Prisma aus Kronglas konnte man den Spalt nicht so weit aufdrehen, dass man zwei Linien gesehen hat.
 Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größer als 2.75 mm sein müsste.
+
+\begin{align}
+\sigma_{A}=\sqrt{D^{2} \cdot \sigma_{S}^{2} + S^{2} \cdot \sigma_{D}^{2}}
+\end{align}
 
 \begin{table}[!htb]
 	\centering
@@ -368,6 +372,13 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 	\end{tabular}
 \end{table}
 
+\subsubsection{Grenzen der Auflösung}
+
+\begin{align}
+	S&=B \cdot \cos{\left (\frac{\delta+\epsilon}{2}\right )}\\
+\sigma_{S}&=\frac{1}{2} \cdot \sqrt{B^{2} \cdot \sigma_{\delta}^{2} \cdot \sin^{2}{\left (\frac{\delta+\epsilon}{2} \right )} + 4 \cdot \sigma_{B}^{2} \cdot \cos^{2}{\left (\frac{\delta+\epsilon}{2} \right )}}
+\end{align}
+
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
@@ -377,14 +388,19 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 	    Ablenkwinkel $\delta$ & $(38.7\pm 0.1)^\circ$ &  $(51.9\pm 0.1)^\circ$ & $(65.0\pm 0.1)^\circ$ \\
 	    Basisbreite $B$ & $(5.2 \pm 0.1)~$cm & $(5.2 \pm 0.2)~$cm &$(6.0 \pm 0.2)~$cm \\
 	    maximale Spaltbreite $S$ & $(3.39 \pm 0.07)~$cm & $(2.91 \pm 0.11)~$cm & $(2.86 \pm 0.09)~$cm \\
-	    Auflösungsvermögen A& $(1.47 \pm 0.07)\cdot 10^5$ & $(3.90 \pm 0.17)\cdot 10^5$ & $(2.42 \pm 0.10)\cdot 10^5$ \\
-		kleinstes $\Delta \lambda$ bei $\lambda=579.07~$nm& $(3.9 \pm 0.2)~$pm & $(1.49 \pm 0.06)~$pm & $(2.4 \pm 0.1)~$pm	\\
+	    Auflösungsvermögen A& $2560 \pm 120$ & $6800 \pm 290$ & $(4220 \pm 180$ \\
+		kleinstes $\Delta \lambda$ bei $\lambda=579.07~$nm& $(230 \pm 10)~$pm & $(85 \pm 4)~$pm & $(137 \pm 6)~$pm	\\
 		\hline
 	\end{tabular}
 \end{table}
 
 \subsection{Gitterspektrometer}
 \subsubsection{Gitterkonstante}
+\begin{align}
+	a&=\frac{k \cdot \lambda}{\sin{\left (\alpha \right )}}\\
+	\sigma_{a}&=\frac{k \cdot \lambda \cdot \sigma_{\alpha}}{\sin^{2}{\left (\alpha \right )}} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert
+\end{align}
+
 
 \begin{table}[!htb]
 	\centering	
@@ -393,16 +409,52 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 		&Farbe & violett & violett & grün & gelb & gelb \\
 		& $\lambda$ [nm]& 404.66 & 407.78 & 546.07 & 576.96 & 579.07\\
 		\hline
-		\multirow{2}{c}{1.Ordnung} & Ablenkwinkel $[^\circ]$ & $2.40 \pm 0.10$ & $2.40 \pm 0.10$ & $3.20 \pm 0.10$ & $3.40 \pm 0.10$ & $3.40 \pm 0.10$ \\ 
-		& Gitterkonstante [$\mu$m] 
+		1.Ordnung & $\alpha$ $[^\circ]$ & $2.40 \pm 0.10$ & $2.40 \pm 0.10$ & $3.20 \pm 0.10$ & $3.40 \pm 0.10$ & $3.40 \pm 0.10$ \\ 
+		& $a$ [$\mu$m] & $10.1 \pm 0.4$ & $10.2 \pm 0.4$ & $10.1 \pm 0.4$ & $10.0 \pm 0.3$ & $10.1 \pm 0.3$\\
+		\hline
+		4.Ordnung & $\alpha$ $[^\circ]$  & $9.30 \pm 0.10$
+& $10.00 \pm 0.10$ & $12.60 \pm 0.10$ & $13.30 \pm 0.10$ & $13.40 \pm 0.10$ \\
+		& $a$ [$\mu$m] & $10.02 \pm 0.11$ & $9.39 \pm 0.09$ & $10.01 \pm 0.08$ & $10.03 \pm 0.07$ & $9.99 \pm 0.07$ \\
+		\hline
+		8.Ordnung & $\alpha$ $[^\circ]$ & $20.50 \pm 0.10$
+& $20.50 \pm 0.10$ & $26.10 \pm 0.10$ & $27.70 \pm 0.10$ & $27.90 \pm 0.10$ \\
+		& $a$ [$\mu$m] & $9.24 \pm 0.04$ & $9.32 \pm 0.04$ & $9.93 \pm 0.04$ & $9.93 \pm 0.04$ & $9.90 \pm 0.04$ \\
+		\hline
 	\end{tabular}
 \end{table}
 
-\subsubsection{Wellenlängenunterschied der gelben Linien}
+Als gewichteter Mittelwert aus allen Messungen ergibt sich für die Gitterkonstante ein Wert von $a=(9.769 \pm 0.015)~\si{\micro\meter}$.
+Da die Messung der violetten Linien teilweise sehr abweichende Werte liefert, wird für alle weiteren Rechnungen der gewichtete Mittelwert aus Messungen der gelben sowie grünen Linien für die Gitterkonstante genommen: 
+\begin{empheq}[box=\shadowbox]{align*}
+	a=(9.936 \pm 0.018)~\si{\micro\meter}\,.
+\end{empheq}
 
-Für die 4.Beugungsordnung ergibt sich eine Differenz von $\Delta\lambda=(4.1 \pm 4.1)~$nm, für die 8. Beugungsordnung eine von $\Delta\lambda=(3.7 \pm 1.9)~$nm.
+\subsubsection{Wellenlängenunterschied der gelben Linien}
+\begin{align}
+	\Delta\lambda&=\frac{a}{k} \cdot \Delta \alpha \cdot \cos{\left (\alpha \right )}\\
+\sigma_{\Delta\lambda}&=\frac{a}{k} \cdot \sigma_{\Delta \alpha} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert
+\end{align}
+
+Für die 4.Beugungsordnung ergibt sich eine Differenz von $\Delta\lambda=(4.2 \pm 4.2)~$nm, für die 8. Beugungsordnung eine von $\Delta\lambda=(3.8 \pm 1.9)~$nm.
 Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 
+\subsubsection{Wellenlänge der violetten Doppellinie}
+\begin{align}
+	\lambda_\text{violett}&=\frac{a}{k} \cdot \sin{\left (\alpha \right )}\\
+\sigma_{\lambda_\text{violett}}&=\frac{1}{k} \cdot \sqrt{a^{2} \cdot \sigma_{\alpha}^{2} \cdot \cos^{2}{\left (\alpha \right )} + \sigma_{a}^{2} \cdot \sin^{2}{\left (\alpha \right )}}
+\end{align}
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		& 1.Ordnung & \multicolumn{2}{c|}{4.Ordnung} & 8.Ordnung
+		& & & 1.Wert & 2.Wert & \\
+		\hline
+		$\lambda_\text{violett}$ & $(410 \pm 20)~$nm & $(404 \pm 5)~$nm & $(431 \pm 5)~$nm & $(435.0 \pm 2.2)~$nm  \\
+		\hline
+	\end{tabular}
+\end{table}
 
 \subsubsection{Auflösungsvermögen}
 \begin{table}[!htb]
@@ -420,8 +472,10 @@ Dies wird dann erreicht, wenn das Gitter in seiner ganzen Breite von $1.5~$cm be
 
 \section{Diskussion}
 \label{sec:diskussion}
+\subsection{Prismenspektrometer}
 
-\section{Anhang}
+\subsection{Gitterspektrometer}
+
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
