@@ -306,10 +306,13 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 
 \section{Auswertung}
 \label{sec:auswertung}
+
+\subsection{Prismenspektrometer}
+
 \begin{figure}[!htb]
 	\def\svgwidth{0.8\linewidth}	
 	\input{strahlengang1.pdf_tex}
-	\caption{Strahlengang des zur Justage.}
+	\caption{Strahlengang zur Justage.}
 \end{figure}
 
 
@@ -354,19 +357,18 @@ Dann erhält man $B=(0.55\pm 0.11)~$mm.\\
 Bei dem Prisma aus Kronglas konnte man den Spalt nicht so weit aufdrehen, dass man zwei Linien gesehen hat.
 Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größer als 2.75 mm sein müsste.
 
-\begin{table}
+\begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline		
 		& theoretischer Wert & leichtes Flintglas &  Kronglas \\
 		\hline
 	    Auflösungsvermögen & $274.44$ & $81 \pm 17$ & $>208$ \\
-		\hline
-		
+		\hline		
 	\end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline		
@@ -381,7 +383,29 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 	\end{tabular}
 \end{table}
 
-\begin{table}
+\subsection{Gitterspektrometer}
+\subsubsection{Gitterkonstante}
+
+\begin{table}[!htb]
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		&Farbe & violett & violett & grün & gelb & gelb \\
+		& $\lambda$ [nm]& 404.66 & 407.78 & 546.07 & 576.96 & 579.07\\
+		\hline
+		\multirow{2}{c}{1.Ordnung} & Ablenkwinkel $[^\circ]$ & $2.40 \pm 0.10$ & $2.40 \pm 0.10$ & $3.20 \pm 0.10$ & $3.40 \pm 0.10$ & $3.40 \pm 0.10$ \\ 
+		& Gitterkonstante [$\mu$m] 
+	\end{tabular}
+\end{table}
+
+\subsubsection{Wellenlängenunterschied der gelben Linien}
+
+Für die 4.Beugungsordnung ergibt sich eine Differenz von $\Delta\lambda=(4.1 \pm 4.1)~$nm, für die 8. Beugungsordnung eine von $\Delta\lambda=(3.7 \pm 1.9)~$nm.
+Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
+
+
+\subsubsection{Auflösungsvermögen}
+\begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline		
@@ -391,7 +415,8 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 		\hline
 	\end{tabular}
 \end{table}
-Maximales Auflösungsvermögen in der ersten Ordnung $A=1542.89 \pm 2.4$
+Das maximales Auflösungsvermögen in der ersten Ordnung beträgt $A=1542.89 \pm 2.4$.
+Dies wird dann erreicht, wenn das Gitter in seiner ganzen Breite von $1.5~$cm beleuchtet wird.
 
 \section{Diskussion}
 \label{sec:diskussion}
