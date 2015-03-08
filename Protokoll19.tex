@@ -336,8 +336,8 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 		 & Literaturwert [$10^6~^\circ$/m] & Messwert [$10^6~^\circ$/m]\\
 		\hline
 		Kronglas& 3.47 & $4.33 \pm 0.19$ \\
-		Schweres Flintglas & 15.0 & $13.39 \pm 0.26$ \\
 		Leichtes Flintglas & 9.01 & $8.45 \pm 0.22$ \\
+		Schweres Flintglas & 15.0 & $13.39 \pm 0.26$ \\
 		\hline
 	\end{tabular}
 	\label{tab:Dispersion}
@@ -387,9 +387,9 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 		\hline
 	    Ablenkwinkel $\delta$ & $(38.7\pm 0.1)^\circ$ &  $(51.9\pm 0.1)^\circ$ & $(65.0\pm 0.1)^\circ$ \\
 	    Basisbreite $B$ & $(5.2 \pm 0.1)~$cm & $(5.2 \pm 0.2)~$cm &$(6.0 \pm 0.2)~$cm \\
-	    maximale Spaltbreite $S$ & $(3.39 \pm 0.07)~$cm & $(2.91 \pm 0.11)~$cm & $(2.86 \pm 0.09)~$cm \\
-	    Auflösungsvermögen A& $2560 \pm 120$ & $6800 \pm 290$ & $(4220 \pm 180$ \\
-		kleinstes $\Delta \lambda$ bei $\lambda=579.07~$nm& $(230 \pm 10)~$pm & $(85 \pm 4)~$pm & $(137 \pm 6)~$pm	\\
+	    maximale Spaltbreite $S$ & $(3.39 \pm 0.07)~$cm & $(2.86 \pm 0.09)~$cm & $(2.91 \pm 0.11)~$cm \\
+	    Auflösungsvermögen A& $2560 \pm 120$ & $4220 \pm 180$ & $6800 \pm 290$ \\
+		kleinstes $\Delta \lambda$ bei $\lambda=579.07~$nm& $(230 \pm 10)~$pm & $(137 \pm 6)~$pm& $(85 \pm 4)~$pm \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -453,8 +453,8 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		& 1.Ordnung & \multicolumn{2}{c|}{4.Ordnung} & 8.Ordnung
-		& & & 1.Wert & 2.Wert & \\
+		& 1.Ordnung & \multicolumn{2}{c|}{4.Ordnung} & 8.Ordnung\\
+	    & & 1.Wert & 2.Wert & \\
 		\hline
 		$\lambda_\text{violett}$ & $(410 \pm 20)~$nm & $(404 \pm 5)~$nm & $(431 \pm 5)~$nm & $(435.0 \pm 2.2)~$nm  \\
 		\hline
@@ -466,7 +466,7 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		& theoretischer Wert &1.Ordnung &  4.Ordnung & 8.Ordnung \\
+		& benötigter Wert &1.Ordnung &  4.Ordnung & 8.Ordnung \\
 		\hline
 	    Auflösungsvermögen & $274.44$ & $>257$ & $308.6 \pm 0.5$ & $<617$ \\
 		\hline
@@ -478,8 +478,23 @@ Dies wird dann erreicht, wenn das Gitter in seiner ganzen Breite von $1.5~$cm be
 \section{Diskussion}
 \label{sec:diskussion}
 \subsection{Prismenspektrometer}
+Der Wert der Winkeldispersion weicht für Kronglas etwa $25\%$, für leichtes Flintglas etwa $6\%$ und für schweres Flintglas  um circa $11\%$ vom jeweiligen Literaturwert ab.
+Außerdem wurden die Fehler unterschätzt, da die tatsächlichen Werte nicht in den Fehlerintervallen liegen.
+Eventuell ist die Winkeldispersion der Prismen nicht wie angenommen konstant, was diese Abweichungen zum Teil erklären würde.
+Ein weiterer Grund könnte das nicht ganz parallele Licht gewesen sein.
+So ist die Umrechnung der Feintriebdifferenz in eine Winkeldifferenz fehlerhaft.\\
 
+Für das Auflösungsvermögen des Flintglas-Prismas wurde ein mehr als dreimal so kleiner Wert als der für die beiden gelben Linien benötigte gemessen.
+Dies kann nicht sein, lässt sich aber damit erklären, dass für die mit dem Feintrieb bestimmte Breite des Spalts $B'$ nicht -- wie notiert -- $0.55~$mm gemessen wurde, sondern $1.55~$mm.
+Dann verdreifacht sich das Auflösungsvermögen in etwa.
+Bei dem Prisma aus Kronglas konnte nur abgeschätzt werden, da man auch bei ganz geöffneter Stellung des zweiten verstellbaren Spalts die zwei Linien nicht getrennt sehen konnte.
+So haben wir die Blenden, die eigentlich für das Gitter bestimmt waren, genutzt.
+Aber auch hier hat eine Breite von $2.75~$mm nicht genügt.
+Später wurde uns bewusst, dass der Beleuchtungsspalt viel weiter auf geht und mit dem anderen getauscht hätte werden müssen.\\
 
+Das maximale Auflösungsvermögen zu erreichen ist mit diesem Aufbau sehr illusorisch, da man dafür einen parallelen kohärenten Strahl benötigt, der einige Zentimeter breit ist.
+Erst dann wird das gesamte Prisma beleuchtet.
+Wenn man dies aber hinbekäme könnte man mit dem Prisma aus schwerem Flintglas Wellenlängendifferenzen von weniger als einem Zehntel Nanometer auflösen.
 
 \subsection{Gitterspektrometer}
 Bei einem Wert von $a=(9.936 \pm 0.018)~\si{\micro\meter}$ für die Gitterkonstante kann man davon ausgehen, dass der tatsächliche Wert $a=10~\si{\micro\meter}$ beträgt.
@@ -490,7 +505,23 @@ Dieser kann aber das Ergebnis stark beeinflussen.
 Außerdem ist auffällig, dass die aus den violetten Linien höherer Ordnung berechnete Gitterkonstante viel zu gering ist.
 Dies lässt sich damit erklären, dass falsch gezählt wurde.\\
 
+Der Wellenlängenunterschied der gelben Linien ist mit einem sehr großen Fehler behaftet, da die Winkeldifferenz in etwa genauso groß ist wie der Messfehler von $0.1^\circ$
+Trotzdem liegt der bestimmte Wert in der Größenordnung des tatsächlichen Wertes.
+Er weicht in etwa um $100\%$ ab, aber der tatsächliche Wert liegt im Fehlerintervall.
+Man hätte die Differenz genauer bestimmen können, wenn man mit dem Feintrieb gearbeitet hätte.\\
 
+Die Wellenlänge der violetten Doppellinie wurde aus der ersten und dem ersten Wert der vierten Beugungsordnung gut bestimmt: Beide Werte weisen eine Differenz von weniger als $2\%$ vom Literaturwert $\lambda_1=407.78~$nm, $ \lambda_2=404.66~$nm auf.
+Außerdem liegen die tatsächlichen Werte im Fehlerintervall.
+Die anderen beiden Messwerte sind mehr als $5\%$ zu groß.
+Dies lässt sich wieder damit erklären, dass falsch gezählt wurde.
+Vermutlich wurde die hellere blaue Linie $\lambda=435.84~$nm vermessen.\\
+
+Das benötigte Auflösungsvermögen, um die zwei gelben Linien noch getrennt sehen zu können, wurde in der ersten Ordnung auch nicht mit der größten Blende erreicht, so konnte nur abgeschätzt werden.
+In der 8. Ordnung hingegen konnte man mit der $0.75~$mm breiten Linie wie zuvor in der vierten Ordnung beide Linien getrennt sehen.
+Setze man aber die etwas kleinere $0.5~$mm-Blende ein, wurde das Bild schwarz.
+Der Spalt wurde also nicht beleuchtet.
+So konnte wieder nur abgeschätzt werden.
+Beide Abschätzungen stimmen mit der Theorie überein.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
