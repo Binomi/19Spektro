@@ -312,14 +312,16 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 \begin{figure}[!htb]
 	\def\svgwidth{0.8\linewidth}	
 	\input{strahlengang1.pdf_tex}
-	\caption{Strahlengang zur Justage.}
+	\caption{Strahlengang zur Justage. \protect \footnotemark}
+	\label{fig:Strahlengang1}	
 \end{figure}
-
+\footnotetext{von http://genug-davon.de/aprakt/index.php?section=v19}
 
 \begin{figure}[!htb]
 	\def\svgwidth{0.8\linewidth}
 	\input{strahlengang2.pdf_tex}
-	\caption{Strahlengang des Prismenspektrometers.}
+	\caption{Strahlengang des Prismenspektrometers.  \protect \footnotemark[1]}
+	\label{fig:Strahlengang2}
 \end{figure}
 
 \subsubsection{Winkeldispersion}
@@ -340,6 +342,7 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 		Schweres Flintglas & 15.0 & $13.39 \pm 0.26$ \\
 		\hline
 	\end{tabular}
+	\caption{Winkeldispersion der drei Prismenmaterialien}
 	\label{tab:Dispersion}
 \end{table}
 
@@ -370,6 +373,8 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 	    Auflösungsvermögen & $274.44$ & $81 \pm 17$ & $>208$ \\
 		\hline		
 	\end{tabular}
+	\caption{Prismenspektrometer: Auflösungsvermögen}
+	\label{tab:prismaA}
 \end{table}
 
 \subsubsection{Grenzen der Auflösung}
@@ -421,6 +426,8 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 		& $a$ [$\mu$m] & $9.24 \pm 0.04$ & $9.32 \pm 0.04$ & $9.93 \pm 0.04$ & $9.93 \pm 0.04$ & $9.90 \pm 0.04$ \\
 		\hline
 	\end{tabular}
+	\caption{Gitter: Beugungswinkel und daraus berechnete Gitterkonstante}
+	\label{tab:gitter}
 \end{table}
 
 Als gewichteter Mittelwert aus allen Messungen ergibt sich für die Gitterkonstante ein Wert von $a=(9.769 \pm 0.015)~\si{\micro\meter}$.
@@ -459,6 +466,8 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 		$\lambda_\text{violett}$ & $(410 \pm 20)~$nm & $(404 \pm 5)~$nm & $(431 \pm 5)~$nm & $(435.0 \pm 2.2)~$nm  \\
 		\hline
 	\end{tabular}
+	\caption{Wellenlänge der violetten Doppellinie}
+	\label{tab:violett}
 \end{table}
 
 \subsubsection{Auflösungsvermögen}
@@ -471,6 +480,8 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 	    Auflösungsvermögen & $274.44$ & $>257$ & $308.6 \pm 0.5$ & $<617$ \\
 		\hline
 	\end{tabular}
+	\caption{Gitter: Auflösungsvermögen}
+	\label{tab:gitterA}
 \end{table}
 Das maximales Auflösungsvermögen in der ersten Ordnung beträgt $A=1542.89 \pm 2.4$.
 Dies wird dann erreicht, wenn das Gitter in seiner ganzen Breite von $1.5~$cm beleuchtet wird.
