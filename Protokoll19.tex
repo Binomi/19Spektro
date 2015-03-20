@@ -196,14 +196,14 @@ Dieses Spektrometer basiert auf der \textit{Dispersion}, also der Wellenlängena
 Unter \textit{normaler} Dispersion versteht man, dass der Brechungsindex $n$ mit zunehmender Wellenlänge abnimmt.
 Bei anomaler Dispersion geschieht das Gegenteil: $\frac{\dif n}{\dif \lambda} > 0$.\\
 
-Das \emph{Snellius'sches Brechungsgesetz} beschreibt, wie ein Strahl, der im Winkel $\alpha_1$ zum Lot auf eine Grenzschicht zwischen einem Medium mit Brechungsindex $n_1$ und einem mit einem Index $n_2$ trifft, gebrochen wird:
+Das \emph{Snellius'sches Brechungsgesetz} beschreibt, wie ein Strahl, der im Winkel $\alpha_1$ zum Lot auf eine Grenzschicht zwischen einem Medium mit Brechungsindex $n_1$ und einem mit einem Index $n_2$ trifft, gebrochen wird \cite[S.101]{hecht}:
 \begin{align}
 	n_1 \cdot \sin \alpha_1 = n_2 \cdot \sin \alpha_2 \,.
 	\label{eq:Snellius} 
 \end{align}
 Im zweiten Medium verläuft der Strahl dann in einem Winkel $\alpha_2$ zum Lot.\\
 
-Mit dem Brechungsgesetz  und den geometrischen Beziehungen aus Abb.\ref{fig:prisma} $\gamma_1+\gamma_2=\varepsilon$ sowie $\delta=\alpha_1+\alpha_2-\epsilon$ folgt bei symmetrischer Durchstrahlung ($\alpha_1=\alpha_2$) für den Ablenkwinkel $\delta$
+Mit dem Brechungsgesetz  und den geometrischen Beziehungen aus Abb.\ref{fig:prisma} $\gamma_1+\gamma_2=\varepsilon$ sowie $\delta=\alpha_1+\alpha_2-\epsilon$ folgt bei symmetrischer Durchstrahlung ($\alpha_1=\alpha_2$) für den Ablenkwinkel $\delta$ (vgl. \cite[S.187f.]{hecht})
 
 \begin{align}
 	\sin\left(\frac{\delta+\varepsilon}{2}\right)=n\cdot\sin\left(\frac{\varepsilon}{2}\right)\,.
@@ -222,17 +222,17 @@ Dies leitet man nach $n$ ab und stellt nach $\frac{\dif \delta}{\dif n}$ um:
 \end{figure}
 
 Das \textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$ charakterisiert, ob ein Spektrometer zwei unterschiedliche Wellenlängen auflösen kann.
-
+Für das Prisma gilt dann:
 \begin{align}
-	A=B\left|\frac{\dif n}{\dif \lambda}\right|
+	A=B\left|\frac{\dif n}{\dif \lambda}\right|\,.
 \end{align}
 
 \subsection{Gitterspektrometer}
 Für ein Maximum muss der Wegunterschied ein ganzzahliges Vielfaches der Wellenlänge $\lambda$ sein, also $\Delta s=a \cdot \sin \alpha=k \lambda$.
-Um totale Auslöschung zu haben, 
+Für Minima und Maxima gilt dann nach \cite[S.461ff.]{hecht}
 \begin{align}
-	\sin\alpha_\text{max}&=\frac{k\lambda}{a}\\
-	\sin\alpha_\text{min}&=\frac{n\lambda}{Na}
+	\sin\alpha_\text{max}&=\frac{k\lambda}{a}\,,\\
+	\sin\alpha_\text{min}&=\frac{n\lambda}{Na}\,.
 \end{align}
 
 Um zwei verschiedene Wellenlängen aufzulösen, muss das Maximum der einen Wellenlänge und das Minimum der anderen an gleicher Stelle liegen.
