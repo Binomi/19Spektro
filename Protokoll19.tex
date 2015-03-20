@@ -214,6 +214,12 @@ Dies leitet man nach $n$ ab und stellt nach $\frac{\dif \delta}{\dif n}$ um:
 	\frac{\dif \delta}{\dif n}=\frac{\sin\left(\frac{\varepsilon}{2}\right)}{\cos\left(\frac{\delta+\varepsilon}{2}\right)}=\frac{B}{S}
 \end{align}
 
+Damit kann man nun die Winkeldispersion berechnen:
+\begin{align}
+	D=\frac{\dif \delta}{\dif \lambda}=\frac{B}{S}\cdot\frac{\dif n}{\dif \lambda}\,.
+	\label{eq:winkeldispersion}
+\end{align}
+
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.6]{Prisma2.png}
@@ -225,6 +231,7 @@ Das \textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$ charakteris
 Für das Prisma gilt dann:
 \begin{align}
 	A=B\left|\frac{\dif n}{\dif \lambda}\right|\,.
+	\label{eq:aufloesungP}
 \end{align}
 
 \subsection{Gitterspektrometer}
@@ -309,6 +316,9 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 
 \subsection{Prismenspektrometer}
 \subsubsection{Strahlengänge}
+Die Abbildungen \ref{fig:Strahlengang1} und \ref{fig:Strahlengang2} zeigen, wie der Aufbau montiert war.
+Zuerst wird das Licht der Hg-Lampe mit der Kondensorlinse auf einen Spalt abgebildet.
+Die zweite Linse hat einen Abstand $f_2$ von diesem.
 \begin{figure}[!htb]
 	\def\svgwidth{0.8\linewidth}	
 	\input{strahlengang1.pdf_tex}
@@ -325,11 +335,14 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 \end{figure}
 
 \subsubsection{Winkeldispersion}
+Die Winkeldispersion wird als konstant angenommen.
+Also kann man sie berechnen, indem man den Winkelunterschied $\Delta\delta$ durch den Wellenlängenunterschied $\Delta\lambda$ teilt.
+Mit der Kleinwinkelnäherung ist $\Delta\delta=\frac{\Delta x}{s}$ und der Fehlerfortpflanzung folgen
 \begin{align}
-	D&=\frac{x_\text{gelb} - x_\text{grün}}{\Delta\lambda \cdot s}\\
-\sigma_{D}&=\frac{1}{\Delta\lambda \cdot s^{2}} \cdot \sqrt{2s^{2} \cdot \sigma_{x} + \sigma_{s}^{2} \cdot \left(x_\text{gelb} - x_\text{grün}\right)^{2}}
+	D&=\frac{x_\text{gelb} - x_\text{grün}}{\Delta\lambda \cdot s}\,\text{und}\\
+\sigma_{D}&=\frac{1}{\Delta\lambda \cdot s^{2}} \cdot \sqrt{2s^{2} \cdot \sigma_{x} + \sigma_{s}^{2} \cdot \left(x_\text{gelb} - x_\text{grün}\right)^{2}}\,.
 \end{align}
-
+Dabei ist $s$ der Abstand zwischen dritter Linse und Okular, $\Delta x$ ist der Wegunterschied der am Feintrieb abgelesen wurde.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|}
