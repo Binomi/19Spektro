@@ -230,7 +230,7 @@ Damit kann man nun die Winkeldispersion berechnen:
 Das \textbf{Auflösungsvermögen} $A:=\frac{\lambda}{\Delta\lambda}$ charakterisiert, ob ein Spektrometer zwei unterschiedliche Wellenlängen auflösen kann.
 Für das Prisma gilt dann:
 \begin{align}
-	A=B\left|\frac{\dif n}{\dif \lambda}\right|\,.
+	A=B\left|\frac{\dif n}{\dif \lambda}\right|=D\cdot S\,.
 	\label{eq:aufloesungP}
 \end{align}
 
@@ -238,23 +238,26 @@ Für das Prisma gilt dann:
 Für ein Maximum muss der Wegunterschied ein ganzzahliges Vielfaches der Wellenlänge $\lambda$ sein, also $\Delta s=a \cdot \sin \alpha=k \lambda$.
 Für Minima und Maxima gilt dann nach \cite[S.461ff.]{hecht}
 \begin{align}
-	\sin\alpha_\text{max}&=\frac{k\lambda}{a}\,,\\
+	\sin\alpha_\text{max}&=\frac{k\lambda}{a}\,,
+	\label{eq:gitterMax}\\
 	\sin\alpha_\text{min}&=\frac{n\lambda}{Na}\,.
 \end{align}
+Dabei ist $a$ die Gitterkonstante, also der Abstand zweier benachbarter Spalte, und $k$ die Beugungsordnung sowie $N$ die Anzahl der beleuchteten Spalte, $n$ zählt die Minima vom 0.Hauptmaximum aus.\\
 
 Um zwei verschiedene Wellenlängen aufzulösen, muss das Maximum der einen Wellenlänge und das Minimum der anderen an gleicher Stelle liegen.
+Dabei gilt $n=k\cdot N+1$.
 Somit ist das Auflösungsvermögen durch
 \begin{align}
 	A=kN
+	\label{eq:gitterA}
 \end{align}
 gegeben.
-Dabei ist $k$ die Beugungsordnung und $N$ die Anzahl der beleuchteten Spalte.
 
 \subsection{Quecksilber-Dampflampe}
 Eine Quecksilber-Dampflampe hat kein kontinuierliches Spektrum wie etwa eine Glühbirne, sondern diskrete Linien.
 In Tabelle \ref{tab:Hg-Linien} sind die für diesen Versuch wichtigen Linien aufgeführt.
 
-\begin{table}
+\begin{table}[!h]
 	\centering
 	\begin{tabular}{|c|c|}
 	    \hline		
@@ -318,7 +321,10 @@ Für die 1., 4. und 8. Ordnung der beiden gelben Linien wird in die Plexiglasfü
 \subsubsection{Strahlengänge}
 Die Abbildungen \ref{fig:Strahlengang1} und \ref{fig:Strahlengang2} zeigen, wie der Aufbau montiert war.
 Zuerst wird das Licht der Hg-Lampe mit der Kondensorlinse auf einen Spalt abgebildet.
-Die zweite Linse hat einen Abstand $f_2$ von diesem.
+Die zweite Linse hat einen Abstand $f_2$ von diesem und macht das Lichtbündel parallel.
+Mit der dritten Linse und dem Okular kann man den Strahl dann sehen.
+Im zweiten Bild muss man den Schwenkarm, an dem die dritte Linse befestigt ist, so drehen, dass das Prisma symmetrisch durchstrahlt wird und man die Aufspaltung in die einzelnen Wellenlängen beobachten kann.
+
 \begin{figure}[!htb]
 	\def\svgwidth{0.8\linewidth}	
 	\input{strahlengang1.pdf_tex}
@@ -343,6 +349,8 @@ Mit der Kleinwinkelnäherung ist $\Delta\delta=\frac{\Delta x}{s}$ und der Fehle
 \sigma_{D}&=\frac{1}{\Delta\lambda \cdot s^{2}} \cdot \sqrt{2s^{2} \cdot \sigma_{x} + \sigma_{s}^{2} \cdot \left(x_\text{gelb} - x_\text{grün}\right)^{2}}\,.
 \end{align}
 Dabei ist $s$ der Abstand zwischen dritter Linse und Okular, $\Delta x$ ist der Wegunterschied der am Feintrieb abgelesen wurde.
+Wir nehmen diese Ungenauigkeiten an: $\sigma_x=0.02\,$mm und $\sigma_s=0.5\,$cm.
+In Tabelle \ref{tab:Dispersion} werden die so ermittelten Winkeldispersions-Werte mit den Literaturwerten verglichen.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -373,9 +381,14 @@ Dann erhält man $S=(0.55\pm 0.11)~$mm.\\
 Bei dem Prisma aus Kronglas konnte man den Spalt nicht so weit aufdrehen, dass man zwei Linien gesehen hat.
 Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größer als 2.75 mm sein müsste.
 
+Setzt man nun die Spaltbreite $S$ und die in Tab.\ref{tab:Dispersion} berechneten Winkeldispersionen in die Formel \eqref{eq:aufloesungP} ein, kann man das Auflösungsvermögen berechnen.
+Dabei ergibt sich aus der Fehlerfortpflanzung
 \begin{align}
-\sigma_{A}=\sqrt{D^{2} \cdot \sigma_{S}^{2} + S^{2} \cdot \sigma_{D}^{2}}
+\sigma_{A}=\sqrt{D^{2} \cdot \sigma_{S}^{2} + S^{2} \cdot \sigma_{D}^{2}}\,.
 \end{align}
+Die so erlangten Werte befinden sich in Tabelle \ref{tab:prismaA}.
+Der theoretische Wert ist der benötigte Wert, um die gelben Linien unterscheiden zu können, also $\frac{\lambda}{\Delta\lambda}$.
+Bei Kronglas konnte jedoch nur abgeschätzt werden, dass der Stahl breiter und somit das Auflösungsvermögen höher sein müsste, um die Linien getrennt sehen zu können.
 
 \begin{table}[!htb]
 	\centering
@@ -391,11 +404,15 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 \end{table}
 
 \subsubsection{Grenzen der Auflösung}
-
+Aus geometrischen Überlegungen erhält man folgende Beziehung zwischen der Basisbreite des Prismas und dem maximal möglichen Strahldurchmesser:
 \begin{align}
-	S&=B \cdot \cos{\left (\frac{\delta+\epsilon}{2}\right )}\\
-\sigma_{S}&=\frac{1}{2} \cdot \sqrt{B^{2} \cdot \sigma_{\delta}^{2} \cdot \sin^{2}{\left (\frac{\delta+\epsilon}{2} \right )} + 4 \cdot \sigma_{B}^{2} \cdot \cos^{2}{\left (\frac{\delta+\epsilon}{2} \right )}}
+	S&=B \cdot \cos{\left (\frac{\delta+\epsilon}{2}\right )}\,,\\
+\sigma_{S}&=\frac{1}{2} \cdot \sqrt{B^{2} \cdot \sigma_{\delta}^{2} \cdot \sin^{2}{\left (\frac{\delta+\epsilon}{2} \right )} + 4 \cdot \sigma_{B}^{2} \cdot \cos^{2}{\left (\frac{\delta+\epsilon}{2} \right )}}\,.
 \end{align}
+Dabei ist $\delta$ der Ablenkwinkel des Strahls und der Prismawinkel $\varepsilon=60^\circ$, da die Prismagrundflächen gleichseitige Dreiecke sind.
+Mit den Werten für die Winkeldispersion kann man nun das maximal erreichbare Auflösungsvermögen berechnen.
+Daraus kann man auch den kleinsten noch trennbaren Wellenlängenunterschied $\Delta\lambda$ berechnen.
+All diese Werte finden sich in Tabelle \ref{tab:maxAP}.
 
 \begin{table}[!htb]
 	\centering
@@ -410,15 +427,18 @@ Mit den beiliegenden Blenden haben wir festgestellt, dass die Spaltbreite größ
 		kleinstes $\Delta \lambda$ bei $\lambda=579.07~$nm& $(230 \pm 10)~$pm & $(137 \pm 6)~$pm& $(85 \pm 4)~$pm \\
 		\hline
 	\end{tabular}
+	\caption{maximales Auflösungsvermögen der Prismen}
+	\label{tab:maxAP}
 \end{table}
 
 \subsection{Gitterspektrometer}
 \subsubsection{Gitterkonstante}
+Stellt man \eqref{eq:gitterMax} um, kann man die Gitterkonstante $a$ berechnen:
 \begin{align}
-	a&=\frac{k \cdot \lambda}{\sin{\left (\alpha \right )}}\\
-	\sigma_{a}&=\frac{k \cdot \lambda \cdot \sigma_{\alpha}}{\sin^{2}{\left (\alpha \right )}} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert
+	a&=\frac{k \cdot \lambda}{\sin{\left (\alpha \right )}}\,,\\
+	\sigma_{a}&=\frac{k \cdot \lambda \cdot \sigma_{\alpha}}{\sin^{2}{\left (\alpha \right )}} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert\,.
 \end{align}
-
+Diese ist in Tabelle \ref{tab:gitter} für alle gemessenen Beugungsordnungen der beobachteten Linien aus den Ablenkwinkeln $\alpha$ berechnet.
 
 \begin{table}[!htb]
 	\centering	
@@ -450,25 +470,29 @@ Da die Messung der violetten Linien teilweise sehr abweichende Werte liefert, wi
 \end{empheq}
 
 \subsubsection{Wellenlängenunterschied der gelben Linien}
+Das $k$.Maximum der Wellenlänge $\lambda$ wird unter dem Winkel $\alpha$ gemessen, das $k$.Maximum von $\lambda+\Delta\lambda$ unter $\alpha+\Delta\alpha$.
+Dabei ist der Wellnlängenunterschied $\Delta\lambda$ und so auch der Winkelunterschied $\Delta\alpha$ gering -- wie bei der gelben Doppellinie.
+Dann gilt:
 \begin{align}
-	\frac{k\lambda}{a}&=\sin\alpha \\
-	\frac{k(\lambda+\Delta\lambda)}{a}&=\sin(\alpha+\Delta\alpha) =\sin\alpha\cdot\cos\Delta\alpha +\cos\alpha\cdot\sin\Delta\alpha \approx\sin\alpha+ \cos\alpha\cdot\Delta\alpha
+	\frac{k\lambda}{a}&=\sin\alpha\qquad\text{und} \\
+	\frac{k(\lambda+\Delta\lambda)}{a}&=\sin(\alpha+\Delta\alpha) =\sin\alpha\cdot\cos\Delta\alpha +\cos\alpha\cdot\sin\Delta\alpha \approx\sin\alpha+ \cos\alpha\cdot\Delta\alpha\,.
 \end{align}
-
+Bildet man die Differenz aus beiden Gleichungen, kann man $\Delta\lambda$ bestimmen:
 \begin{align}
-	\Delta\lambda&=\frac{a}{k} \cdot \Delta \alpha \cdot \cos{\left (\alpha \right )}\\
-\sigma_{\Delta\lambda}&=\frac{a}{k} \cdot \sigma_{\Delta \alpha} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert
+	\Delta\lambda&=\frac{a}{k} \cdot \Delta \alpha \cdot \cos{\left (\alpha \right )}\,,\\
+\sigma_{\Delta\lambda}&=\frac{a}{k} \cdot \sigma_{\Delta \alpha} \cdot \left\lvert{\cos{\left (\alpha \right )}}\right\rvert\,.
 \end{align}
 
 Für die 4.Beugungsordnung ergibt sich eine Differenz von $\Delta\lambda=(4.2 \pm 4.2)~$nm, für die 8. Beugungsordnung eine von $\Delta\lambda=(3.8 \pm 1.9)~$nm.
 Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 
 \subsubsection{Wellenlänge der violetten Doppellinie}
+Stellt man \eqref{eq:gitterMax} um, kann man die Wellenlänge $\lambda$ berechnen:
 \begin{align}
-	\lambda_\text{violett}&=\frac{a}{k} \cdot \sin{\left (\alpha \right )}\\
-\sigma_{\lambda_\text{violett}}&=\frac{1}{k} \cdot \sqrt{a^{2} \cdot \sigma_{\alpha}^{2} \cdot \cos^{2}{\left (\alpha \right )} + \sigma_{a}^{2} \cdot \sin^{2}{\left (\alpha \right )}}
+	\lambda_\text{violett}&=\frac{a}{k} \cdot \sin{\left (\alpha \right )}\,,\\
+\sigma_{\lambda_\text{violett}}&=\frac{1}{k} \cdot \sqrt{a^{2} \cdot \sigma_{\alpha}^{2} \cdot \cos^{2}{\left (\alpha \right )} + \sigma_{a}^{2} \cdot \sin^{2}{\left (\alpha \right )}}\,.
 \end{align}
-
+Die sich ergebenden Werte für $\lambda_\text{violett}$ werden in Tabelle \ref{tab:violett} aufgeführt.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
@@ -484,6 +508,11 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 \end{table}
 
 \subsubsection{Auflösungsvermögen}
+Auch bei diesem Spektrometer kann man das Auflösungsvermögen berechnen.
+In \eqref{eq:gitterA} setzt man nämlich für die Spaltzahl $N$ den Quotient aus Spaltbreite und Gitterkonstante $\frac{S}{a}$ ein.
+Es ergeben sich die Werte in Tabelle \ref{tab:gitterA}.
+Dort wird das Auflösungsvermögen wieder mit dem Minimalwert verglichen, den man benötigt, um die beiden Linien getrennt sehen zu können.
+Außerdem musste zweimal abgeschätzt werden (vgl. Diskussion).\\
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
@@ -496,6 +525,7 @@ Der tatsächliche Wert liegt bei  $\Delta\lambda=2.11~$nm.
 	\caption{Gitter: Auflösungsvermögen}
 	\label{tab:gitterA}
 \end{table}
+
 Das maximales Auflösungsvermögen in der ersten Ordnung beträgt $A=1542.89 \pm 2.4$.
 Dies wird dann erreicht, wenn das Gitter in seiner ganzen Breite von $1.5~$cm beleuchtet wird.
 
